@@ -40,14 +40,20 @@ const ProjectCard = ({ value }) => {
 const CardButtons = ({ svn_url }) => {
   return (
     <>
+      <a 
+        href={`${svn_url}/blob/master/README.md`} 
+        target=" _blank" className="btn btn-outline-secondary mr-3"
+      >
+        <i className="fab fa-github" /> Overview
+      </a>
+      <a href={svn_url} target=" _blank" className="btn btn-outline-secondary mr-3">
+        <i className="fab fa-github" /> Repo
+      </a>
       <a
         href={`${svn_url}/archive/master.zip`}
-        className="btn btn-outline-secondary mr-3"
+        className="btn btn-outline-secondary"
       >
         <i className="fab fa-github" /> Clone Project
-      </a>
-      <a href={svn_url} target=" _blank" className="btn btn-outline-secondary">
-        <i className="fab fa-github" /> Repo
       </a>
     </>
   );
